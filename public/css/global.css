@@ -1,15 +1,34 @@
 :root {
+  --black: #273540;
+  --white: #F6F6EE;
+  --yellow: #EBEAA0;
+
+  --pink-safe: #A92B55;
+  --pink: #D94C7B;
+  --light-pink: #EAA1BD;
+
+  --green-safe: #4A9631; /* + use for graphical elements*/
+  --green: #7BC961;
+  --light-green: #B2DCA0;
+
+  --blue-safe: #0E3B8A;
+  --blue: #1F8CC2;
+  --light-blue: #83CEDE;
 }
 img { width: 100%; height: auto; }
-a { text-decoration-style:wavy; }
+a { text-decoration-style: wavy; }
 p { margin: 0; padding: 0.5rem 0;}
 p:first-of-type { padding-top: 0;}
 p:last-of-type { padding-bottom: 0;}
+h1 { margin: 0; }
 html {
   font-family: Arial, sans-serif;
   margin: 0; padding: 0;
+  background-color: var(--white); color: var(--black);
 }
-body { margin: 0; padding: 0; }
+body {
+  margin: 0; padding: 0; height: 100%;
+}
 
 /* Big mobile */
 @media screen and (min-width: 25rem) {
