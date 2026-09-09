@@ -5,32 +5,33 @@ body {
 body>div>div {
   position: relative;
   #bg-overlay {
-    position: absolute; box-sizing: border-box; z-index: -1;
-    width: 100%; height: 100%; overflow: hidden;
-    background-color: var(--yellow);
-    >div {
-      height: calc(100vh - 4rem); margin: 2rem 1rem;
-      box-sizing: border-box;
-      position: sticky; top: 1rem;
-      background-color: var(--white);
-      >img {
-        position: absolute;
-        mix-blend-mode: darken; 
-      }
-      >img:first-child {
-        height: 100%; width: auto;
-        right: -10%;
-      }
+    box-shadow: inset 0 0 0 2rem var(--yellow);
+    position: sticky; top: 0; z-index: -1;
+    height: 100vh; margin-top: -100vh;
+    &::after {
+      content:""; display: block; width: calc(100% - 1rem); height: calc(100% - 1rem);
+      position: absolute; top: 0; margin: 0.5rem; outline: 1px solid var(--pink);
+    }
+    &::before {
+      content:""; display: block; width: calc(100% - 4rem); height: calc(100% - 4rem);
+      position: absolute; top: 0; margin: 2rem; outline: 1px solid var(--black);
     }
   }
+  >div:first-child {
+    width: 100%; height: calc(100% - 100vh); margin-top: 100vh;
+    position: absolute; top: 0; mix-blend-mode: darken; overflow: hidden;
+    img { position: absolute; top: 0;}
+    img:first-child { height: 100%; width: auto; right: -12rem;}
+  }
   header {
-    height: 100vh; margin: 0 1rem; padding: 1rem 1rem 5rem; box-sizing: border-box;
+    height: 75vh; margin: 0 1rem; padding: 1rem 1rem 5rem; box-sizing: border-box;
     display: flex; flex-direction: column; text-align: center;
     justify-content: center; align-items: center;
+    >* { background-color: var(--white);}
   }
-  #premise {
-    margin: 0 1rem; padding-bottom: 2rem;
-  }
+  /* #premise { */
+    /* margin: 0 1rem; padding-bottom: 2rem; */
+  /* } */
 }
 /* Big mobile */
 @media screen and (min-width: 25rem) {
