@@ -1,0 +1,227 @@
+/* h1, h2 { font-size: 2.5rem; text-align: center; color: var(--blue); margin: 2rem 0; } */
+/* h2 { margin: 1.5rem auto; font-size: 2rem; color: var(--yellow);} */
+/* h3, h4, h5, h6 { font-size: 1.75rem; margin: 0.5rem 0; color: var(--light-red); } */
+/* h4 { font-size: 1.5rem; color: var(--blue); } */
+/* h5 { font-size: 1.25rem; color: var(--yellow);} */
+/* h6 { font-size: 1rem; } */
+/* #footnote { margin-top: 3rem; } */
+/* img { width: 100%; max-width: 20rem; display: block; margin: auto; } */
+/* code { */
+  /* display: block; font-size: 1rem; color: var(--light-yellow); */
+  /* background-color: var(--black); border: 2px solid var(--dark-gray); */
+  /* margin: 0.5rem 0; */
+/* } */
+/* p>code, li>code { display: inline-block; margin: 0;} */
+/* details { */
+  /* background-color: var(--black); */
+  /* border: 2px solid var(--dark-gray); */
+  /* border-radius: 0.5rem; */
+  /* width: 100%; */
+  /* summary { */
+    /* background-color: var(--dark-gray); */
+    /* padding: 0.5rem 1rem; border-radius: 0.5rem; */
+  /* } */
+  /* code { border-color: var(--gray);} */
+  /* >*:not(summary) { */
+    /* display: inline-block; width:calc(100% - 2rem); */
+    /* margin: 0.5rem 1rem; padding: 0; */
+    /* &:nth-child(2) { margin: 0 1rem;} */
+    /* &:last-child { margin-bottom: 1rem;} */
+  /* } */
+/* } */
+/* details[open] summary { border-radius: 0.5rem 0.5rem 0 0; margin-bottom: 1rem;} */
+/* details summary:hover { */
+  /* background-color: color-mix(in srgb, var(--dark-gray), var(--gray) 25%); */
+  /* color: var(--black); */
+/* } */
+body {
+  display: flex; flex-direction: column; gap: 1rem;
+  min-height: 100vh;
+  #menu {
+    background-color: var(--yellow); background-image: url("/public/img/paper-soft.png"); background-blend-mode: overlay;
+    border-bottom: 1px solid var(--black);
+    background-size: 0.75rem 0.75rem;
+    height: 4rem; width: 100%;
+    position: fixed; top: 0; left: 0;
+    >div { height: 100%; width: 100%;}
+    img { height: 100%; width: auto;}
+    >div>div {
+      height: 100%; display: flex; align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem; box-sizing: border-box;
+      >button {
+        height: 100%; cursor: pointer;
+        border: 0; background-color: transparent !important;
+      }
+      >a { height: 100%; width: auto; }
+    }
+    >div>ul {
+      background-color: var(--yellow); background-image: url("/public/img/paper-soft.png"); background-blend-mode: overlay;
+      border-top: 1px solid var(--black); border-bottom: 1px solid var(--black);
+      margin: 0; padding: 1rem; list-style: none; gap: 0.5rem; flex-direction: column;
+      a:before { content: ">"; display: inline-block; margin-right: .25rem;}
+      a {
+        display: block; padding:0.5rem;
+        width: 100%; box-sizing: border-box; border-radius: 0.5rem;
+      }
+      a:hover { background-color: var(--white); background-image: url("/public/img/paper.png"); background-blend-mode: overlay; }
+    }
+  }
+}
+main {
+  padding: 5rem 1rem 1rem; flex-grow: 1;
+  footer {
+    display: flex; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem; margin: 1rem 0 0; padding: 0;
+    background: none;
+    border-radius: 0.5rem;
+    a {
+      background-color: var(--light-pink); color: var(--pink-safe);
+      border: 1px solid var(--pink);
+      padding: 1rem; width: 100%; border-radius: 0.5rem;
+      font-size: 1.25rem; font-weight: bold;
+      text-decoration: none;
+      span {
+        font-size: 1rem; font-weight:normal;
+        display: block; margin-bottom: 0.5rem;
+      }
+      &:hover { background-color: var(--pink-safe); color: var(--light-pink); border-color: var(--pink-safe);}
+    }
+    a:last-child {
+      text-align: right; border-color: var(--green);
+      background-color: var(--light-green); color: var(--green-safe);
+      &:hover { background-color: var(--green-safe); color: var(--light-green); border-color: var(--green-safe);}
+    }
+      
+  }
+}
+#pagemenu {
+  background-color: var(--yellow); background-image: url("/public/img/paper-soft.png"); background-blend-mode: overlay;
+  border-top: 1px solid var(--black); border-bottom: 1px solid var(--black);
+  width: 100%; padding: 1rem; box-sizing: border-box;
+  position: fixed; top: 4rem; left: 0;
+  overflow: scroll; max-height: calc(100% - 4rem);
+  ul { padding-inline-start: 2rem; display: flex; flex-direction: column; gap: 0.5rem;}
+  >ul { margin: 0; padding: 0; width: 100%; }
+  li {
+    list-style: none;
+    a:before { content: ">"; display: inline-block; margin-right: .25rem;}
+    a {
+      display: block; padding: 0.5rem; border-radius: 0.5rem;
+      width: 100%; box-sizing: border-box;
+    }
+    a:hover { background-color: var(--white); background-image: url("/public/img/paper.png"); background-blend-mode: overlay; }
+  }
+}
+/* Big mobile */
+@media screen and (min-width: 35rem) {
+  img { max-width: 25rem; }
+  body #menu>div>div {
+    padding: 0.5rem 1.5rem;
+    >div>a:first-child {
+      content:url("/img/logo-white.png");
+      &:hover { content:url("/img/logo-hover.png"); }
+    }
+  }
+  main {
+    padding: 5rem 2rem 1rem;
+    footer {
+      a { width: auto; padding: 1rem 2.5rem 1rem 1.5rem; flex-grow: 0;}
+      a:last-child { padding: 1rem 1.5rem 1rem 2.5rem;}
+    }
+  }
+}
+/* Tablet */
+@media screen and (min-width: 50rem) {
+  h1, h2 { text-align: left;}
+  img { max-width: 30rem; }
+  body {
+    flex-direction: row; gap: 0;
+    padding: 1rem 0;
+    background-color: var(--yellow); background-image: url("/public/img/paper-soft.png"); background-blend-mode: overlay;
+    width: 100%;
+    &::before,&::after {
+      content:""; display: block; width: 100%; height: 1rem;
+      position: fixed; top:0; left: 0; z-index: 2;
+      background-color: var(--yellow); background-image: url("/public/img/paper-soft.png"); background-blend-mode: overlay;
+    }
+    &::after {top: unset; bottom:0;}
+    #menu {
+      all:unset; padding: 1rem;
+      border-right: 1px solid var(--pink);
+      /* width: 20%; flex-shrink: 0; max-width: 12rem; */
+      flex-basis: 15%; flex-shrink: 0;
+      >div { position: sticky; top: 1rem; height: auto;}
+      >div>div {
+        flex-direction: column;
+        height: auto; padding: 0;
+        button { display: none; }
+        >div { flex-direction: column-reverse; gap: 1rem; }
+        a {
+          height: auto; text-align: center; width: 100%;
+          img { width: 100%; height: auto; max-width: 10rem;}
+        }
+      }
+      >div>ul {
+        display: flex !important; padding: 0; margin-top: 1rem;
+        background:none; border: none;
+      }
+    }
+    main {
+      width: auto; padding: 1rem; min-width: 0; position: relative;
+      background-color: var(--white); background-image: url("/public/img/paper.png"); background-blend-mode: overlay;
+      >* {position: relative; z-index: 1;}
+      footer {
+        a { width: 100%; padding: 1rem 1.5rem 1rem 1rem; flex-grow: 0;}
+        a:last-child { padding: 1rem 1rem 1rem 1.5rem;}
+      }
+      &::before {
+        content:""; display: block; width: calc(100% + 2rem); height: calc(100vh - 2rem - 2px);
+        position: sticky; margin-left: -1rem; margin-top: calc(-100vh + 3rem);
+        top: calc(1rem + 1px); bottom: 0; margin-bottom: -1rem;
+        outline: 2px solid var(--black); outline-offset: -1px;
+        background: linear-gradient(var(--black), var(--black)) 50% 0 / 2px 1rem no-repeat,
+                    linear-gradient(var(--black), var(--black)) 50% 100% / 2px 1rem no-repeat,
+                    linear-gradient(var(--black), var(--black)) 0 50% / 1rem 2px no-repeat,
+                    linear-gradient(var(--black), var(--black)) 100% 50% / 1rem 2px no-repeat;
+      }
+      &::after {
+        content:""; display: block; width: calc(100% + 2rem); height: calc(100vh - 2rem - 2px);
+        position: sticky; margin-left: -1rem; margin-top: calc(-100vh + 4rem);
+        top: -1rem; bottom: 1rem; margin-bottom: -1rem;
+        outline: 1px solid var(--light-gray); outline-offset: -3rem;
+      }
+    }
+    #pagemenu {
+      border: none; border-left: 1px solid var(--pink);
+      display: block !important;
+      max-height: none; overflow: visible;
+      position: static; top: 0;
+      flex-basis: 15rem; flex-shrink: 0;
+      >ul { position: sticky; top: 1rem; height: auto;}
+    }
+  }
+}
+/* Desktop */
+@media screen and (min-width: 67rem) {
+  img { max-width: 35rem; }
+  body {
+    gap: 1rem;
+    #menu {
+      padding-top: 2rem;
+      >div { top: 2rem; }
+    }
+    main {
+      padding-top: 2rem;
+      footer {
+        a { width: auto; padding: 1rem 3rem 1rem 1.5rem; flex-grow: 0;}
+        a:last-child { padding: 1rem 1.5rem 1rem 3rem;}
+      }
+    }
+    #pagemenu {
+      flex-basis: 18rem;
+      ul { padding-inline-start: 1.75rem;}
+      >ul { padding: 0; top: 2rem; }
+    }
+  }
+}

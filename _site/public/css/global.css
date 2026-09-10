@@ -16,6 +16,7 @@
   --blue-safe: #0E3B8A;
   --blue: #1B7AB4;
   --light-blue: #83CEDE;
+  --paper: background-image: url("/public/img/paper.png"); background-blend-mode: overlay;
 }
 img { width: 100%; height: auto; }
 a { color: var(--blue-safe); }
@@ -28,6 +29,7 @@ html {
   font-family: Arial, sans-serif;
   margin: 0; padding: 0;
   background-color: var(--white); color: var(--black);
+  background-image: url("/public/img/paper.png"); background-blend-mode: overlay;
 }
 body {
   margin: 0; padding: 0; height: 100%;
@@ -35,6 +37,7 @@ body {
 
 footer {
   background-color: var(--black); color: var(--white);
+  background-image: url("/public/img/paper-soft.png"); background-blend-mode: overlay;
   padding: 2rem;
   a { color: var(--light-blue);}
 }
