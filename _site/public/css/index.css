@@ -7,7 +7,7 @@ header {
   height: 100vh; text-align: center;
   display: flex; flex-direction: column; gap: 0.5rem; 
   justify-content: center; align-items: center;
-  border-bottom: 1px solid var(--black);
+  /* border-bottom: 1px solid var(--black); */
   >* { margin-left: 1rem; margin-right: 1rem;}
   #bg-overlay {
     height: 100vh; width: 100%; position: absolute; z-index: -1;
@@ -48,7 +48,8 @@ header {
     label { display: block; text-align: left; margin-bottom: 0.5rem;}
   }
   >nav {
-    display: flex; gap: 0.5rem;
+    display: flex; flex-wrap: wrap;
+    justify-content: center; align-items: center; gap: 0.5rem;
     a {
       padding: 0.5rem 1rem;
       border: 1px solid var(--pink); border-radius: 0.25rem;
@@ -68,28 +69,104 @@ header {
 }
 
 main {
+  background-color: var(--yellow);
+  width: 100%; overflow: hidden;
   section { padding: 1rem; }
+  #carousel {
+    align-items: center; display: flex; padding: 1rem 0;
+    height: 11rem; margin: -0.5rem 0; gap: 1rem;
+    position: relative;
+    a:hover { transform: scale(1.02);}
+    img { height: 10rem; width: auto;}
+  }
   #premise {
-    background-color: var(--yellow); padding-top: 0;
+    padding-top: 0;
     >ul {
       list-style: none; margin: 0; padding: 0;
       display: flex; flex-direction: column; gap: 1rem;
+      li { width: 100%; }
       figure { margin: 0; text-align: center; }
-      img { background-color: var(--white); border: 2px solid var(--black); }
+      img { background-color: var(--white); max-width: 15rem; border: 2px solid var(--black); }
     }
   }
+  #tiers { background-color: var(--white); }
   #faq {
-    background-color: var(--yellow);
     display: flex; flex-direction: column; gap: 1rem;
+    h2 {display: block; width: 100%;}
+    aside {
+      background-color: var(--light-pink); border-radius: 0.5rem;
+      padding: 0; border: 1px solid var(--pink-safe);
+      h3 {
+        margin: 0; padding: 0.5rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+        background-color: var(--pink-safe); color: var(--light-pink);
+      }
+      p { padding: 0.5rem; }
+    }
+    aside:nth-child(3n) {
+      background-color: var(--light-green); border-color: var(--green-safe);
+      h3 { background-color: var(--green-safe); color: var(--light-green);}
+    }
+    aside:nth-child(3n+1) {
+      background-color: var(--light-blue); border-color: var(--blue-safe);
+      h3 { background-color: var(--blue-safe); color: var(--light-blue);}
+    }
   }
 }
 
 /* Big mobile */
 @media screen and (min-width: 25rem) {
+  header {
+    #bg-overlay {
+      box-shadow: inset 0 0 0 3rem var(--yellow);
+      >div { margin: 6rem; width: calc(100% - 12rem); height: calc(100% - 12rem); }
+      &::before { width: calc(100% - 6rem); height: calc(100% - 6rem); margin: 3rem; }
+      &::after { outline-offset:-2rem; box-shadow: inset 0 0 0 3rem color-mix(var(--yellow) 60%, transparent); }
+    }
+  }
+  main {
+    #carousel { height: 12rem; img { height: 11rem; }}
+    #premise>ul {
+      flex-direction: row; margin: auto;
+      max-width: 50rem; margin: auto;
+    }
+  }
 }
 /* Tablet */
 @media screen and (min-width: 40rem) {
+  header {
+    #bg-overlay {
+      box-shadow: inset 0 0 0 4rem var(--yellow);
+      >div { margin: 8rem; width: calc(100% - 16rem); height: calc(100% - 16rem); }
+      &::before { width: calc(100% - 8rem); height: calc(100% - 8rem); margin: 4rem; }
+      &::after { outline-offset:-2.5rem; box-shadow: inset 0 0 0 4rem color-mix(var(--yellow) 60%, transparent); }
+    }
+  }
+  main {
+    #carousel { height: 14rem; img { height: 13rem; }}
+    #premise>ul { max-width: 55rem; }
+    #faq {
+      flex-direction: row; flex-wrap: wrap; margin: auto;
+      aside { width: 40%; flex-grow: 1;}
+    }
+  }
 }
 /* Desktop */
 @media screen and (min-width: 67rem) {
+  header {
+    #bg-overlay {
+      box-shadow: inset 0 0 0 6rem var(--yellow);
+      >div { margin: 10rem; width: calc(100% - 20rem); height: calc(100% - 20rem); }
+      &::before { width: calc(100% - 12rem); height: calc(100% - 12rem); margin: 6rem; }
+      &::after { outline-offset:-3.5rem; box-shadow: inset 0 0 0 6rem color-mix(var(--yellow) 60%, transparent); }
+    }
+  }
+  main {
+    #carousel { height: 15rem; img { height: 14rem; }}
+    #premise>ul { max-width: 60rem; }
+    #faq {
+      flex-direction: row; flex-wrap: wrap; margin: auto;
+      aside { width: 30%; flex-grow: 1;}
+    }
+  }
 }

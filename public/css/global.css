@@ -18,7 +18,7 @@
   --light-blue: #83CEDE;
 }
 img { width: 100%; height: auto; }
-a { color: var(--blue); }
+a { color: var(--blue-safe); }
 a:hover { text-decoration-style: wavy; }
 p { margin: 0; padding: 0.5rem 0;}
 p:first-of-type { padding-top: 0;}
