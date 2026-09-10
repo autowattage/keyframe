@@ -1,17 +1,19 @@
-/* h1, h2 { font-size: 2.5rem; text-align: center; color: var(--blue); margin: 2rem 0; } */
-/* h2 { margin: 1.5rem auto; font-size: 2rem; color: var(--yellow);} */
-/* h3, h4, h5, h6 { font-size: 1.75rem; margin: 0.5rem 0; color: var(--light-red); } */
-/* h4 { font-size: 1.5rem; color: var(--blue); } */
-/* h5 { font-size: 1.25rem; color: var(--yellow);} */
-/* h6 { font-size: 1rem; } */
-/* #footnote { margin-top: 3rem; } */
-/* img { width: 100%; max-width: 20rem; display: block; margin: auto; } */
-/* code { */
-  /* display: block; font-size: 1rem; color: var(--light-yellow); */
-  /* background-color: var(--black); border: 2px solid var(--dark-gray); */
-  /* margin: 0.5rem 0; */
-/* } */
-/* p>code, li>code { display: inline-block; margin: 0;} */
+h1, h2 { font-size: 2.5rem; text-align: center; background-color: var(--light-blue); color: var(--blue-safe); padding: 1rem; margin: 1rem 0; border-radius: 0.5rem; border: 1px solid var(--blue);}
+h2 { margin: 1.5rem auto; font-size: 2rem; background-color: var(--light-pink); color: var(--pink-safe); padding: 0.75rem; margin: 0; border-color: var(--pink);}
+h3, h4, h5, h6 { font-size: 1.75rem; padding: 0.5rem 0; margin: 0.5rem 0; color: var(--green-safe); }
+h3 { background-color: var(--light-green); padding-left: 0.5rem; border-radius: 0.5rem; border: 1px solid var(--green);}
+h4 { font-size: 1.5rem; color: var(--blue-safe); }
+h5 { font-size: 1.25rem; color: var(--pink-safe);}
+h6 { font-size: 1rem;}
+#footnote { margin-top: 3rem; }
+.footnote { padding: 0 0.25rem;}
+img { width: 100%; max-width: 20rem; display: block; margin: auto; }
+code {
+  display: block; font-size: 1rem; color: var(--yellow);
+  background-color: var(--black); border: 2px solid var(--dark-gray);
+  margin: 0.5rem 0; padding: 0.5rem; border-radius: 0.5rem;
+}
+p>code, li>code { display: inline-block; margin: 0; padding: 0 0.25rem; border-radius: 0.25rem;}
 /* details { */
   /* background-color: var(--black); */
   /* border: 2px solid var(--dark-gray); */
@@ -69,7 +71,7 @@ body {
   }
 }
 main {
-  padding: 5rem 1rem 1rem; flex-grow: 1;
+  padding: 4rem 1rem 1rem; flex-grow: 1;
   footer {
     display: flex; justify-content: space-between;
     flex-wrap: wrap; gap: 1rem; margin: 1rem 0 0; padding: 0;
@@ -124,7 +126,7 @@ main {
     }
   }
   main {
-    padding: 5rem 2rem 1rem;
+    padding: 4rem 2rem 1rem;
     footer {
       a { width: auto; padding: 1rem 2.5rem 1rem 1.5rem; flex-grow: 0;}
       a:last-child { padding: 1rem 1.5rem 1rem 2.5rem;}
@@ -151,7 +153,7 @@ main {
       border-right: 1px solid var(--pink);
       /* width: 20%; flex-shrink: 0; max-width: 12rem; */
       flex-basis: 15%; flex-shrink: 0;
-      >div { position: sticky; top: 1rem; height: auto;}
+      >div { position: sticky; top: 2rem; height: auto;}
       >div>div {
         flex-direction: column;
         height: auto; padding: 0;
@@ -168,7 +170,7 @@ main {
       }
     }
     main {
-      width: auto; padding: 1rem; min-width: 0; position: relative;
+      width: auto; padding: 0 1rem 1rem; min-width: 0; position: relative;
       background-color: var(--white); background-image: url("/public/img/paper.png"); background-blend-mode: overlay;
       >* {position: relative; z-index: 1;}
       footer {
@@ -196,9 +198,9 @@ main {
       border: none; border-left: 1px solid var(--pink);
       display: block !important;
       max-height: none; overflow: visible;
-      position: static; top: 0;
+      position: static;
       flex-basis: 15rem; flex-shrink: 0;
-      >ul { position: sticky; top: 1rem; height: auto;}
+      >ul { position: sticky; top: 2rem; height: auto;}
     }
   }
 }
@@ -209,10 +211,9 @@ main {
     gap: 1rem;
     #menu {
       padding-top: 2rem;
-      >div { top: 2rem; }
+      >div { top: 3rem; }
     }
     main {
-      padding-top: 2rem;
       footer {
         a { width: auto; padding: 1rem 3rem 1rem 1.5rem; flex-grow: 0;}
         a:last-child { padding: 1rem 1.5rem 1rem 3rem;}
@@ -221,7 +222,7 @@ main {
     #pagemenu {
       flex-basis: 18rem;
       ul { padding-inline-start: 1.75rem;}
-      >ul { padding: 0; top: 2rem; }
+      >ul { padding: 0; }
     }
   }
 }

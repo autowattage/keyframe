@@ -1,0 +1,41 @@
+{% extends "docs.html" %}
+{% set title = "Template file" %}
+
+{% block content %}
+<h1>Template file</h1>
+<p>Here's some <code>code</code> in a paragraph</p>
+<p>Here's a footnote <a href="#footnote-1">[1]</a></p>
+<code>
+  This is code<br>
+  in a code block<br>
+  yay!
+</code>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+<h4>Header 4</h4>
+<h5>Header 5</h5>
+<h6>Header 6</h6>
+<p>Here's another footnote <a href="#footnote-2">[2]</a></p>
+<p>Short paragraph</p>
+<p>Short paragraph</p>
+<p>Short paragraph</p>
+<p>Short paragraph</p>
+
+<hr id="footnote">
+<aside>
+  <p><a href="#" id="footnote-1" class="footnote">[1]</a>Here's a footnote</p>
+  <p><a href="#" id="footnote-2" class="footnote">[2]</a>Here's another footnote</p>
+</aside>
+{% endblock %}
+
+{% block footer %}
+<!-- <div></div> -->
+<a href=""><span>Previous</span>🡸 Previous page</a>
+<a href=""><span>Next</span>Next page 🡺</a>
+{% endblock %}
+
+{% block pagemenu %}
+<li><a href="#">Template file</a></li>
+{% endblock %}
+
+
