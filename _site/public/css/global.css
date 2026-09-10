@@ -1,22 +1,25 @@
 :root {
   --black: #273540;
+  --gray: #60717D;
+  --light-gray: #B7C5D2;
   --white: #F6F6EE;
   --yellow: #EBEAA0;
 
   --pink-safe: #A92B55;
-  --pink: #D94C7B;
-  --light-pink: #EAA1BD;
+  --pink: #CD4472;
+  --light-pink: #F2CBDA;
 
-  --green-safe: #4A9631; /* + use for graphical elements*/
-  --green: #7BC961;
+  --green-safe: #29611E;
+  --green: #4C9136;
   --light-green: #B2DCA0;
 
   --blue-safe: #0E3B8A;
-  --blue: #1F8CC2;
+  --blue: #1B7AB4;
   --light-blue: #83CEDE;
 }
 img { width: 100%; height: auto; }
-a { text-decoration-style: wavy; }
+a { color: var(--blue); }
+a:hover { text-decoration-style: wavy; }
 p { margin: 0; padding: 0.5rem 0;}
 p:first-of-type { padding-top: 0;}
 p:last-of-type { padding-bottom: 0;}
@@ -28,6 +31,12 @@ html {
 }
 body {
   margin: 0; padding: 0; height: 100%;
+}
+
+footer {
+  background-color: var(--black); color: var(--white);
+  padding: 2rem;
+  a { color: var(--light-blue);}
 }
 
 /* Big mobile */

@@ -4,48 +4,44 @@
 {% set favicon = "/favicon.png" %}
 
 {% block content %}
-<div>
-  <div>
+<header>
+  <div id="bg-overlay">
+    <div></div>
     <img src="./public/img/bgoverlay1.png" alt="A flour sack steps on a large pink star with sparks around it">
   </div>
-  <div id="bg-overlay"></div>
-  <header>
-    <h1>Keyframe</h1>
-    <p>code an animation to get art supplies!</p>
-    <div>
-      <aside id="signup">
-        <label for="email">for teenagers 13-18:</label>
-        <input type="email" name="email">
-        <input type="submit" value="sign up!">
-      </aside>
-      <nav>
-        <a href="#premise">how it works</a>
-        <a href="./docs/">tutorial</a>
-        <a href="">submit!</a>
-      </nav>
-    </div>
-  </header>
+  <h1>Keyframe</h1>
+  <p>code an animation in processing and get free art supplies!</p>
+  <aside id="signup">
+    <label for="email">for teenagers 13-18:</label>
+    <input type="email" name="email">
+    <input type="submit" value="sign up!">
+  </aside>
+  <nav>
+    <a href="#premise">how it works</a>
+    <a href="./docs/">tutorial</a>
+    <a href="">submit!</a>
+  </nav>
+  <a href="#premise"><img src="./public/img/arrowdown.png" alt="Set of 3 arrows pointing down"></a>
+</header>
+
+<main>
   <section id="premise">
     <h2>how it works</h2>
     {% set premiselist = [
-      ["", "", "choose your animation software"],
-      ["", "", "work on your project!"],
-      ["", "", "ship your animation online!"],
-      ["", "", "submit and get <a href='#tiers'>prizes</a>!"]
+      ["build.png", "white rabbit with a bucket hat posing next to its onion skins", "work on your animation"],
+      ["upload.png", "", "ship your animation online!"],
+      ["win.png", "", "submit and get <a href='#tiers'>prizes</a>!"]
     ] %}
     <ul>
       {% for step in premiselist %}
       <li><figure>
-        <img src="{{ step[0] }}" alt="{{ step[1] }}">
-        <figcaption>{{ step[2] }}</figcaption>
+        <img src="./public/img/{{ step[0] }}" alt="{{ step[1] }}">
+        <figcaption>{{ loop.index }}) {{ step[2] }}</figcaption>
       </figure></li>
       {% endfor %}
     </ul>
-    <a href="./docs/">get started!</a>
+    <!-- <a href="./docs/">get started!</a> -->
   </section>
-</div>
-
-<main>
   <section id="tiers">
     <h2>tiers</h2>
     <p>Get better prizes by working longer on your projects!</p>
