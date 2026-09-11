@@ -32,19 +32,20 @@
       
 <h1>Basics of p5.js</h1>
 <p>Welcome to the p5.js tutorial page! In this guide, you'll learn the basics of p5.js and make a snowman who's scared of the dark.</p>
-<figure>
-  <img src="/public/img/docs/p5js/finished.png" alt="A snowman with a pink party hat and bowtie in front of a grassy field with a blue sky, smiling">
-  <img src="/public/img/docs/p5js/finished-sad.png" alt="A snowman with a pink party hat and bowtie in front of a grassy field at night, frowning">
-  <figcaption>Fig.1: A happy snowman.<br>Fig.2: A sad snowman.</figcaption>
-</figure>
+<img class="img-small" src="/public/img/docs/p5js/final.gif" alt="A snowman with a pink party hat and bowtie sitting on a blue sky with a grassy field, smiling but frowning when the sky turns dark">
+<!-- <figure> -->
+  <!-- <img src="/public/img/docs/p5js/finished.png" alt="A snowman with a pink party hat and bowtie in front of a grassy field with a blue sky, smiling"> -->
+  <!-- <img src="/public/img/docs/p5js/finished-sad.png" alt="A snowman with a pink party hat and bowtie in front of a grassy field at night, frowning"> -->
+  <!-- <figcaption>Fig.1: A happy snowman.<br>Fig.2: A sad snowman.</figcaption> -->
+<!-- </figure> -->
 
 <h2 id="h2-env">Environment setup</h2>
 <p>There are two ways to code with p5js:</p>
 <ol>
-  <li><a href="https://editor.p5js.org/">p5js web editor</a> (online text editor): record time working with <a href="/docs/time/#h2-ll">Lapse</a></li>
-  <li>p5js with <a href="https://code.visualstudio.com">VSCode</a> (local text editor): record time working with <a href="/docs/time/#h2-hackatime">Hackatime</a></li>
+  <li><a href="https://editor.p5js.org/">p5.js web editor</a> (online text editor): record time working with <a href="/docs/time/#h2-ll">Lapse</a></li>
+  <li>p5.js with <a href="https://code.visualstudio.com">VSCode</a> (local text editor): record time working with <a href="/docs/time/#h2-hackatime">Hackatime</a></li>
 </ol>
-<p>The <a href="https://p5js.org/tutorials/setting-up-your-environment/">p5js tutorial page</a> has a good guide for setting up both these environments.</p>
+<p>The <a href="https://p5js.org/tutorials/setting-up-your-environment/">p5.js tutorial page</a> has a good guide for setting up both these environments.</p>
 
 <h2 id="h2-basic">Basic commands</h2>
 <p>A p5.js project is a website containing 3 files:</p>
@@ -76,7 +77,7 @@
 </ul>
 <p>Make the background blue by changing the number in <code>background(220)</code> to a 3-value rgb color:</p>
 <code>background(0,0,255); // or any blue you want </code>
-<p>To make the grass for our snowman, choose a 3-value rgb color with <a href="https://p5js.org/reference/p5/fill/">fill()</a> and use the <a href="https://p5js.org/reference/p5/rect/">rect()</a> function to draw a rectangle:<br><small>(note: X-Y coordinate values start from the top right corner!)</small></p>
+<p>To make the grass for our snowman, choose a 3-value rgb color with <a href="https://p5js.org/reference/p5/fill/">fill()</a> and use the <a href="https://p5js.org/reference/p5/rect/">rect()</a> function to draw a rectangle:<br><small>(note: X-Y coordinate values start from the top left corner!)</small></p>
 <code>
   // grass<br>
   fill(0, 255, 0); // or any green you want<br>
@@ -86,11 +87,11 @@
 
 <h3 id="h3-doc">Documentation</h3>
 <p>There isn't much you can do with only 2 lines of code, but if you don't already know p5.js, how do you code with p5.js? The solution is to read the <strong>documentation</strong>.</p>
-<p>Documentation is text that explains how software works or how to use it. In our case, the p5.js documentation contains a list of all its functions with examples; it can be found at <a href="https://p5js.org/reference">p5js.org/reference</a>.</p>
+<p>Documentation is text that explains how software works or how to use it. In our case, the p5.js documentation contains a list of all its functions with examples; it can be found at <a href="https://p5js.org/reference">p5.js.org/reference</a>.</p>
 <p>Time to make the snowman! Use the <a href="https://p5js.org/reference/p5/circle/">circle()</a> function to make 3 circles stacked on top of each other.</p>
 <details>
   <summary>Solution</summary>
-  <p>Code is runs from the top to the bottom, so you need to create the bottom snowball before the top and middle snowballs:</p>
+  <p>Code runs from the top to the bottom, so you need to create the bottom snowball before the top and middle snowballs:</p>
   <code>
     // snowman<br>
     fill(255);<br>
@@ -99,8 +100,8 @@
     circle(200, 200, 100); // top
   </code>
 </details>
-<p>Add an carrot nose with the <a href="https://p5js.org/reference/p5/triangle/">triangle()</a> function and a smiley face with the <a href="https://p5js.org/reference/p5/triangle/">arc()</a> function.</p>
-<img class="img-small" src="/public/img/docs/p5js/arc.png" alt="Visual explainer on how to use the arc() function in p5.js">
+<p>Add a carrot nose with the <a href="https://p5js.org/reference/p5/triangle/">triangle()</a> function and a smiley face with the <a href="https://p5js.org/reference/p5/arc/">arc()</a> function.</p>
+<!-- <img class="img-small" src="/public/img/docs/p5js/arc.png" alt="Visual explainer on how to use the arc() function in p5.js"> -->
 <details>
   <summary>Solution</summary>
   <code>
@@ -115,18 +116,15 @@
 </details>
 <img class="img-small" src="/public/img/docs/p5js/base.png" alt="A white snowman with a nose and mouth sitting on a blue sky with a grassy field">
 
-<h3 id="h3-pos">Getting mouse position</h3>
-<p>Let's code the snowman's eyes to follow our mouse pointer! Start off with two eyes for the snowman:</p>
-<details>
-  <summary>Solution</summary>
-  <code>
-    // snowman<br>
-    fill(0);<br>
-    circle(180, 180, 5);<br>
-    circle(220, 180, 5);
-  </code>
-</details>
-<p>To get the location of our mouse, we can pass the <a href="https://p5js.org/reference/p5/mouseX/">mouseX</a> and <a href="https://p5js.org/reference/p5/mouseY/">mouseY</a> variables as arguments for the eye position. Dividing these variables keeps the eyes near its original position.</p>
+<h3 id="h3-mouse">Getting mouse input</h3>
+<p>Let's code the snowman's eyes to follow our mouse pointer and blink when we click the screen! Start off with two eyes for the snowman:</p>
+<code>
+  // snowman<br>
+  fill(0);<br>
+  circle(180, 180, 5);<br>
+  circle(220, 180, 5);
+</code>
+<p>To get the location of our mouse, we can pass the <a href="https://p5js.org/reference/p5/mouseX/">mouseX</a> and <a href="https://p5js.org/reference/p5/mouseY/">mouseY</a> variables as arguments for the eye position. Dividing these variables keeps the eyes near their original position.</p>
 <details>
   <summary>Solution</summary>
   <code>
@@ -136,9 +134,33 @@
   </code>
 </details>
 <img class="img-small" src="/public/img/docs/p5js/eyes.gif" alt="A white snowman looking around sitting on a blue sky with a grassy field">
+<p>To check for mouse clicks, we need to use an <i>if statement</i> that will check the value of the <a href="https://p5js.org/reference/p5/mouseButton/">mouseButton</a> object's <i>left</i> property! An if statement looks like this:</p>
+<code>
+  if ( x ) {<br>
+  &emsp;&emsp;// this code runs if x is true<br>
+  } else if ( y ) {<br>
+  &emsp;&emsp;// this code runs if x is false, but y is true<br>
+  } else {<br>
+  &emsp;&emsp;// this code runs if both x and y are false<br>
+  }
+</code>
+<p>Draw the blinking eye as a straight line with the <a href="https://p5js.org/reference/p5/line/">line()</a> function.</p>
+<details>
+  <summary>Solution</summary>
+  <code>
+    if (mouseButton.left) {<br>
+    &emsp;&emsp;line(168+mouseX/40, 180+mouseY/40, 176+mouseX/40, 180+mouseY/40);<br>
+    &emsp;&emsp;line(208+mouseX/40, 180+mouseY/40, 216+mouseX/40, 180+mouseY/40);<br>
+    } else { // eyes open<br>
+    &emsp;&emsp;circle(172+mouseX/40, 180+mouseY/40,5);<br>
+    &emsp;&emsp;circle(212+mouseX/40, 180+mouseY/40,5);<br>
+    }
+  </code>
+</details>
+<img class="img-small" src="/public/img/docs/p5js/blink.gif" alt="A white snowman blinking and looking around sitting on a blue sky with a grassy field">
 
 <h3 id="h3-img">Loading images</h3>
-<p>Time to pick up your pencil and draw a hat and bow for your snowman! You can also download the example <a href="/public/img/docs/p5js/hat.png">hat.png</a> and <a href="/public/img/docs/p5js/bow.png">bow.png</a> files.</p>
+<p>Pick up your pencil and draw a hat and bow for your snowman! I like to draw using <a href="https://krita.org">Krita</a>, but you can also download the example <a href="/public/img/docs/p5js/hat.png">hat.png</a> and <a href="/public/img/docs/p5js/bow.png">bow.png</a> files.</p>
 <p>To upload your hat and bowtie pictures in the p5.js web editor, click the arrow under the play button to expand the left menu. Then click the plus button next to 'Sketch Files' and click 'Upload File'!</p>
 <img src="/public/img/docs/p5js/image.gif" alt="Uploading an image into p5.js's web editor">
 <p>On Visual Studio Code, open the Explorer panel, then right-click on the empty space and click "Open Containing Folder". Upload your images into the folder and re-open VS Code!</p>
@@ -153,7 +175,7 @@
 </code>
 <details open>
   <summary>What's async and await?</summary>
-  <p>Javascript runs its code one line at a time, so if one line of code takes a long time to execute, then the entire website has to wait for that line of code to run. <i>Asynchronous</i> functions run in the background so that Javascript can run different <i>threads</i> of code at once.</p>
+  <p>JavaScript runs its code one line at a time, so if one line of code takes a long time to execute, then the entire website has to wait for that line of code to run. <i>Asynchronous</i> functions run in the background so that JavaScript can run different <i>threads</i> of code at once.</p>
   <p>To make a function asynchronous, append <code>async</code> in the front of the function declaration. To run an asynchronous function, append <code>await</code> before the function call.</p>
 </details>
 <p>Now that your images are loaded, you can call the <a href="https://p5js.org/reference/p5/image/">image()</a> function to insert the pictures into the canvas.</p>
@@ -165,12 +187,40 @@
     image(bow, 175, 245);
   </code>
 </details>
-<p>To scale down the pictures, you can divide the <i>width</i> and <i>height</i> properties:</p> 
+<p>You can divide the <i>width</i> and <i>height</i> properties to scale down the image:</p> 
 <code>image(hat, 165, 75, hat.width/4, hat.height/4);</code>
 <img class="img-small" src="/public/img/docs/p5js/accessories.png" alt="A snowman with a pink party hat and bowtie sitting on a blue sky with a grassy field">
 
-<h3 id="h3-click">Getting mouse click input</h3>
-<p>hi sisters (literaly) this is in a WIP state right now. Just follow the tutorial and tell me when ur done, im working on this part yay</p>
+<h3 id="h3-key">Getting keyboard input</h3>
+<p>We'll have the space key turn the background to night and make the snowman sad. To check if a key is pressed, use the <a href="https://p5js.org/reference/p5/keyIsDown/">keyIsDown()</a> function and pass a <a href="https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values">KeyboardEvent.key</a> string (text) as the argument.</p>
+<details>
+  <summary>Solution</summary>
+  <code>
+    if (keyIsDown("Space")) {<br>
+    &emsp;&emsp;background(0);<br>
+    } else {<br>
+    &emsp;&emsp;background(0, 0, 255);<br>
+    }
+  </code>
+</details>
+<p>For the smiley face, turn that smiley face into a frown by setting its start/stop values as 0 and PI respectively.</p>
+<details>
+  <summary>Solution</summary>
+  <code>
+    if (keyIsDown("Space")) {<br>
+    &emsp;&emsp;arc(200,230,50,25,PI,0);<br>
+    } else {<br>
+    &emsp;&emsp;arc(200,225,50,25,0,PI);<br>
+    }
+  </code>
+</details>
+
+<img class="img-small" src="/public/img/docs/p5js/final.gif" alt="A snowman with a pink party hat and bowtie sitting on a blue sky with a grassy field, smiling but frowning when the sky turns dark">
+<p>You've finished the tutorial! Congrats on making it this far! Now it's time to make your own animation.</p>
+<p>If you need inspiration, you can check out <a href="https://openprocessing.org/discover/">OpenProcessing</a> for lots of great examples!<br>
+Good luck and have fun!</p>
+<img src="/public/img/docs/p5js/thanks.png" alt="White rabbit with a bowtie and bucket hat grins in front of the camera, saying 'Thanks for following the tutorial!'. Bottom text contains a signature.">
+
 <!-- <hr id="footnote"> -->
 <!-- <aside> -->
   <!-- <p><a href="#" id="footnote-1" class="footnote">[1]</a>Here's a footnote</p> -->
@@ -194,9 +244,9 @@
 <li><a href="#h2-basic">Basic commands</a></li>
 <ul>
   <li><a href="#h3-doc">Documentation</a></li>
-  <li><a href="#h3-pos">Getting mouse position</a></li>
+  <li><a href="#h3-mouse">Getting mouse input</a></li>
   <li><a href="#h3-img">Loading images</a></li>
-  <li><a href="#h3-click">Getting mouse click input</a></li>
+  <li><a href="#h3-key">Getting keyboard input</a></li>
 <ul>
 
     </ul></nav>
