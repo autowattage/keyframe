@@ -60,8 +60,8 @@
 <p>There isn't much you can do with only 2 lines of code, but if you don't already know p5.js, how do you code with p5.js? The solution is to read the <strong>documentation</strong>.</p>
 <p>Documentation is text that explains how software works or how to use it. In our case, the p5.js documentation contains a list of all its functions with examples; it can be found at <a href="https://p5js.org/reference">p5.js.org/reference</a>.</p>
 <p>Time to make the snowman! Use the <a href="https://p5js.org/reference/p5/circle/">circle()</a> function to make 3 circles stacked on top of each other.</p>
-<details>
-  <summary>Solution</summary>
+<details open>
+  <summary><img src="/public/img/docs/solution.png" alt="Solution icon">Solution</summary>
   <p>Code runs from the top to the bottom, so you need to create the bottom snowball before the top and middle snowballs:</p>
   <code>
     // snowman<br>
@@ -73,8 +73,8 @@
 </details>
 <p>Add a carrot nose with the <a href="https://p5js.org/reference/p5/triangle/">triangle()</a> function and a smiley face with the <a href="https://p5js.org/reference/p5/arc/">arc()</a> function.</p>
 <!-- <img class="img-small" src="/public/img/docs/p5js/arc.png" alt="Visual explainer on how to use the arc() function in p5.js"> -->
-<details>
-  <summary>Solution</summary>
+<details open>
+  <summary><img src="/public/img/docs/solution.png" alt="Solution icon">Solution</summary>
   <code>
   // nose<br>
   fill(255, 153, 51);<br>
@@ -96,8 +96,8 @@
   circle(220, 180, 5);
 </code>
 <p>To get the location of our mouse, we can pass the <a href="https://p5js.org/reference/p5/mouseX/">mouseX</a> and <a href="https://p5js.org/reference/p5/mouseY/">mouseY</a> variables as arguments for the eye position. Dividing these variables keeps the eyes near their original position.</p>
-<details>
-  <summary>Solution</summary>
+<details open>
+  <summary><img src="/public/img/docs/solution.png" alt="Solution icon">Solution</summary>
   <code>
     // eyes<br>
     circle(172+mouseX/40, 180+mouseY/40, 5);<br>
@@ -116,8 +116,8 @@
   }
 </code>
 <p>Draw the blinking eye as a straight line with the <a href="https://p5js.org/reference/p5/line/">line()</a> function.</p>
-<details>
-  <summary>Solution</summary>
+<details open>
+  <summary><img src="/public/img/docs/solution.png" alt="Solution icon">Solution</summary>
   <code>
     if (mouseButton.left) {<br>
     &emsp;&emsp;line(168+mouseX/40, 180+mouseY/40, 176+mouseX/40, 180+mouseY/40);<br>
@@ -145,13 +145,13 @@
   }
 </code>
 <details open>
-  <summary>What's async and await?</summary>
+  <summary><img src="/public/img/docs/solution.png" alt="Solution icon">What's async and await?</summary>
   <p>JavaScript runs its code one line at a time, so if one line of code takes a long time to execute, then the entire website has to wait for that line of code to run. <i>Asynchronous</i> functions run in the background so that JavaScript can run different <i>threads</i> of code at once.</p>
   <p>To make a function asynchronous, append <code>async</code> in the front of the function declaration. To run an asynchronous function, append <code>await</code> before the function call.</p>
 </details>
 <p>Now that your images are loaded, you can call the <a href="https://p5js.org/reference/p5/image/">image()</a> function to insert the pictures into the canvas.</p>
-<details>
-  <summary>Solution</summary>
+<details open>
+  <summary><img src="/public/img/docs/solution.png" alt="Solution icon">Solution</summary>
   <code>
     // hat and bow<br>
     image(hat, 165, 75);<br>
@@ -164,8 +164,8 @@
 
 <h3 id="h3-key">Getting keyboard input</h3>
 <p>We'll have the space key turn the background to night and make the snowman sad. To check if a key is pressed, use the <a href="https://p5js.org/reference/p5/keyIsDown/">keyIsDown()</a> function and pass a <a href="https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values">KeyboardEvent.key</a> string (text) as the argument.</p>
-<details>
-  <summary>Solution</summary>
+<details open>
+  <summary><img src="/public/img/docs/solution.png" alt="Solution icon">Solution</summary>
   <code>
     if (keyIsDown("Space")) {<br>
     &emsp;&emsp;background(0);<br>
@@ -175,8 +175,8 @@
   </code>
 </details>
 <p>For the smiley face, turn that smiley face into a frown by setting its start/stop values as 0 and PI respectively.</p>
-<details>
-  <summary>Solution</summary>
+<details open>
+  <summary><img src="/public/img/docs/solution.png" alt="Solution icon">Solution</summary>
   <code>
     if (keyIsDown("Space")) {<br>
     &emsp;&emsp;arc(200,230,50,25,PI,0);<br>

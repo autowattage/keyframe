@@ -36,6 +36,9 @@ details {
   summary {
     background-color: var(--blue-safe); color: var(--light-blue);
     padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;
+    list-style-type: none; display: flex; gap: 0.5rem;
+    align-items: center;
+    >img { height: 1rem; width: auto; margin: 0; display: inline;}
   }
   >*:not(summary) {
     display: inline-block; width: calc(100% - 3rem);
@@ -84,10 +87,11 @@ body {
       a {
         display: block; padding:0.5rem;
         width: 100%; box-sizing: border-box; border-radius: 0.5rem;
+        background-color: var(--light-pink); border: 1px solid var(--pink); color: var(--pink-safe);
+        background-image: url("/public/img/paper-soft.png"); background-blend-mode: overlay;
       }
       a:hover {
-        background-color: var(--white);
-        background-image: url("/public/img/paper.png"); background-blend-mode: overlay;
+        background-color: var(--light-green); border-color: var(--green); color: var(--green-safe);
       }
     }
   }
@@ -136,10 +140,12 @@ main {
     a {
       display: block; padding: 0.5rem; border-radius: 0.5rem;
       width: 100%; box-sizing: border-box;
+      border: 1px solid var(--pink);
+      background-color: var(--light-pink); color: var(--pink-safe);
+      background-image: url("/public/img/paper-soft.png"); background-blend-mode: overlay;
     }
     a:hover {
-      background-color: var(--white);
-      background-image: url("/public/img/paper.png"); background-blend-mode: overlay;
+      background-color: var(--light-green); color: var(--green-safe); border-color: var(--green);
     }
   }
 }
