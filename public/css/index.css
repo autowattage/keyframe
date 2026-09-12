@@ -100,7 +100,9 @@ main {
       }
     }
   }
-  #tiers { background-color: var(--white); background-image: url("/public/img/paper.png"); background-blend-mode: overlay; }
+  #tiers { background-color: var(--white);
+    background-image: url("/public/img/paper.png"); background-blend-mode: overlay;
+  }
   #faq {
     display: flex; flex-direction: column; gap: 1rem;
     h2 {display: block; width: 100%;}

@@ -16,8 +16,31 @@
   --blue-safe: #0E3B8A;
   --blue: #1B7AB4;
   --light-blue: #83CEDE;
-  --paper: background-image: url("/public/img/paper.png"); background-blend-mode: overlay;
 }
+
+@font-face {
+  font-family: papermono; /* set name */
+  src: url("/public/css/PaperMono-Regular.ttf"); /* url of the font */
+}
+@font-face {
+  font-family: geist; /* set name */
+  src: url("/public/css/Geist-VariableFont_wght.ttf"); /* url of the font */
+}
+@font-face {
+  font-family: geist; /* set name */
+  src: url("/public/css/Geist-Italic-VariableFont_wght.ttf"); /* url of the font */
+  font-style: italic;
+}
+@font-face {
+  font-family: relief; /* set name */
+  src: url("/public/css/ComicRelief-Regular.ttf"); /* url of the font */
+}
+@font-face {
+  font-family: relief; /* set name */
+  src: url("/public/css/ComicRelief-Bold.ttf"); /* url of the font */
+  font-weight: bold;
+}
+
 img { width: 100%; height: auto; }
 a { color: var(--blue-safe); }
 a:hover { text-decoration-style: wavy; }
@@ -25,8 +48,10 @@ p { margin: 0; padding: 0.5rem 0;}
 p:first-of-type { padding-top: 0;}
 p:last-of-type { padding-bottom: 0;}
 h1 { margin: 0; }
+/* h1,h2,h3,h4,h5,h6 { font-family: relief, geist, Arial, sans-serif;} */
+code { font-family: papermono, Arial, sans-serif; }
 html {
-  font-family: Arial, sans-serif;
+  font-family: geist, Arial, sans-serif;
   margin: 0; padding: 0;
   background-color: var(--white); color: var(--black);
   background-image: url("/public/img/paper.png"); background-blend-mode: overlay;
