@@ -1,5 +1,6 @@
 {% extends "docs.html" %}
 {% set title = "Submitting your project" %}
+{% set stylelist = [] %}
 
 {% block content %}
 <h1>Submitting your project</h1>
@@ -34,34 +35,69 @@
 <img src="/public/img/docs/submit/lapse.png" alt="Lapse page">
 
 <h2 id="h2-ship">Shipping</h2>
-<p>The last thing to do before submitting is to ship your project, which means publishing and sharing your project online. You can do this on a variety of websites, like a social media post, web forums, or an itch.io page!</p>
+<small>(note to self: explain how to export animations below)</small>
+<p>The last thing to do before submitting is to ship your project, which means publishing and sharing your project online. In our case, you'll ship your animation twice!</p>
+<p>First, publish your animation on social media so you can get views! Here's a small list of where you could upload your animation:</p>
+<ul>
+  <li>Instagram</li>
+  <li>TikTok</li>
+  <li>Youtube</li>
+  <li>Facebook (believe it or not, lots of people use Facebook!)</li>
+  <li>Twitter</li>
+</ul>
+<p>Make sure to include a link <a href="/">Keyframe</a> or <a href="https://hackclub.com">Hack Club</a> in the description!</p>
+<p>Now we need to include a 'demo url' of our project. This can be either a downloadable executable file or a website link- p5.js and three.js projects should publish a website, and Processing projects should have a downloadable.</p>
+<h3 id="h3-ghpages">Publishing a website with Github Pages</h3>
+<p>To make a Github Page, you need to first <a href="#h2-repo">create a Github repository</a>. Then navigate to Settings 🡺 Pages.</p>
+<img src="/public/img/docs/submit/page-a.png" alt="Github settings page">
+<p>In the Build and Deployment 🡺 Branch selection, select the 'main' (or origin) branch and click save.</p>
+<img class="img-small" src="/public/img/docs/submit/gh-pub.gif" alt="Selecting a branch to publish in Github pages">
+<p>Navigate back to your Github repository and click on your deployment:</p>
+<img src="/public/img/docs/submit/todeploy.png" alt="Github repository screen, with the Deployments section highlighted and circled">
+<p>The link to your website can be found in the first deployment! Hooray!</p>
+<img src="/public/img/docs/submit/pages.png" alt="Github deployment screen, with the most recent deploy highlighted and circled">
+
+<h3 id="h3-proc">Processing</h3>
+<p>Processing exports downloadable .exe files as its output. To create an executable, go to File 🡺 Export Application.</p>
+<img class="img-small" src="/public/img/docs/submit/exproc.png" alt="Processing top menu, with the mouse hovered on File > Export Application">
+<p>Select 'Windows (Intel 64-bit)', 'Linux (Intel 64-bit)', and 'Include Java in the Linux (Intel 64-bit) application' options.</p>
+<img class="img-small" src="/public/img/docs/submit/export-screen.png" alt="Processing export application popup">
+<p>Processing will do its job and open up your sketch directory after it's finished. Zip the two folders (separately), then go to your Github repository.</p>
+<img src="/public/img/docs/submit/release.png" alt="Github repository screen, with the Releases section highlighted and circled">
+<p>In the New release page, create a tag (usually 1.0.0 for newly finished projects) for your project, write a title and description, and upload your two .zip files into the 'Attach binaries by dropping them here or selecting them'.
+<img src="/public/img/docs/submit/release-settings.png" alt="Github release creation screen">
+<p>You now have a Github release that you can link to as a demo url!</p>
+<img src="/public/img/docs/submit/release-open.png" alt="A new Github release">
+
+
 <h2 id="h2-submit">Submitting</h2>
 <fieldset>
   <legend>My project...</legend>
   <ul>
-    <li><label><input type="checkbox">has time tracked in Hackatime or Lapse/Lookout</label> (journal.md is not allowed)</li>
-    <li><label><input type="checkbox">contains no AI-generated code</label></li>
+    <li><label><input type="checkbox">has coding time tracked with <a href="/docs/time#h2-hackatime">Hackatime</a> or <a href="/docs/time#h2-ll">Lapse/Lookout</a></label></li>
+    <li><label><input type="checkbox">has at most 25% of its time spent on making assets</label> <small>(it's alright to go over, but your time will be deflated!)</small></li>
+    <li><label><input type="checkbox">contains <strong>no</strong> AI-generated/AI-modified code</label></li>
     <hr>
-    <li><label><input type="checkbox">has a public GitHub repository</label></li>
-    <li><label><input type="checkbox">includes a downloadable package</label></li>
+    <li><label><input type="checkbox">has a <a href="#h2-repo">public GitHub repository</a> with...</label></li>
     <ul>
-      <li>has a README that...</li>
+      <li>a README that...</li>
       <ul>
         <li><label><input type="checkbox">explains what your project is/what it does</label></li>
         <li><label><input type="checkbox">includes a video/gif/screenshot of your animation</label></li>
         <li><label><input type="checkbox">has installation instructions</label></li>
       </ul>
+      <li><label><input type="checkbox">a <a href="#h3-proc">downloadable package</a> OR a <a href="#h3-ghpages">website</a></label></li>
     </ul>
+    <hr>
     <li><label><input type="checkbox">has a demo video posted on social media and...</label></li>
     <ul>
-      <li><label><input type="checkbox">links back to the <a href="/">Keyframe</a> website</label></li>
-      <li><label><input type="checkbox">links to your GitHub repository</label></li>
+      <li><label><input type="checkbox">links back to <a href="/">Keyframe</a> or <a href="https://hackclub.com">Hack Club</a></label></li>
     </ul>
   </ul>
 </fieldset>
 
 <div id="submission-ready">
-  <p>Your project's ready for submission!</p>
+  <p>Awesome, your project's ready for submission!</p>
   <a href="https://forms.hackclub.com/keyframe">submit your project here!</a>
 </div>
 
@@ -81,6 +117,11 @@
     <li><a href="#h3-hack">Hackatime</a></li>
     <li><a href="#h3-ll">Lapse/Lookout</a></li>
   </ul></li>
-  <li><a href="#h2-ship">Shipping and Submitting</a></li>
+  <li><a href="#h2-ship">Shipping</a></li>
+  <li><ul>
+    <li><a href="#h3-ghpages">Publishing a website with Github Pages</a></li>
+    <li><a href="#h3-proc">Processing</a></li>
+  </ul></li>
+  <li><a href="#h2-ship">Submitting</a></li>
 </ul></li>
 {% endblock %}

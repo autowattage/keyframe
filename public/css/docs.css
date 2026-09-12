@@ -34,7 +34,8 @@ details {
   background-color: var(--light-blue); border: 1px solid var(--blue-safe);
   border-radius: 0.5rem; width: 100%; margin: 0.5rem 0;
   summary {
-    background-color: var(--blue-safe); color: var(--light-blue);
+    /* background-color: var(--blue-safe); color: var(--light-blue); */
+    background-color: var(--light-blue); color: var(--blue-safe);
     padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;
     list-style-type: none; display: flex; gap: 0.5rem;
     align-items: center;
@@ -47,7 +48,10 @@ details {
     &:last-child { margin-bottom: 1rem;}
   }
 }
-details[open] summary { border-radius: 0.5rem 0.5rem 0 0; margin-bottom: 1rem;}
+details[open] summary {
+  border-radius: 0.5rem 0.5rem 0 0; margin-bottom: 1rem;
+  border-bottom: 1px solid var(--blue);
+}
 /* details summary:hover { */
   /* background-color: color-mix(in srgb, var(--dark-gray), var(--gray) 25%); */
   /* color: var(--black); */
