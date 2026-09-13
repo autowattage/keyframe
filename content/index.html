@@ -11,11 +11,11 @@
   </div>
   <h1><img src="/public/img/logo.png" alt="Keyframe"></h1>
   <p>code an animation with <a href="https://p5js.org">p5.js</a>, <a href="https://processing.org">processing</a>, or <a href="https://threejs.org/">three.js</a>,<br> get free art supplies!</p>
-  <aside id="signup">
-    <label for="email">for teenagers 13-18:</label>
-    <input type="email" name="email">
-    <input type="submit" value="sign up!">
-  </aside>
+  <!-- <aside id="signup"> -->
+    <!-- <label for="email">for teenagers 13-18:</label> -->
+    <!-- <input type="email" name="email"> -->
+    <!-- <input type="submit" value="sign up!"> -->
+  <!-- </aside> -->
   <nav>
     <a href="#premise">how it works</a>
     <a href="/docs/">tutorial</a>
@@ -63,9 +63,10 @@
     <h2>tiers</h2>
     <p>Get better prizes by working longer on your projects!</p>
     {% set tierlist = [
-      ["", "", "2+ hours: sticker sheet!"],
+      ["/public/img/index/postcard.png", "White and yellow postcard with 6 doodles of a flour sack", "2+ hours: sticker sheet!"],
       ["", "", "8+ hours: Procreate Dreams or animation lightbox!"],
-      ["", "", "15+ hours: CSP Pro 5 license or screenless drawing tablet!"]
+      ["", "", "15+ hours: CSP Pro 5 license or screenless drawing tablet!"],
+      ["/public/img/index/keychain.png", "White flour sack hanging off a keychain", "animations that get 1k+ views on any platform get a custom acrylic keychain!"]
     ] %}
     <ul>
       {% for tier in tierlist %}
@@ -76,8 +77,6 @@
       {% endfor %}
     </ul>
     <img src="" alt=""> <!-- do later -->
-    <p>make an animation with user input to get a postcard-sized drawing inspired by your project!</p>
-    <p>animations that get 1k+ views on any platform will also get a custom acrylic standee!</p>
   </section>
 
   <section id="faq">

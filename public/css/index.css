@@ -3,6 +3,7 @@ body {
 }
 h2 { margin: 0; padding: 1rem; font-size: 2rem; text-align: center;}
 
+
 header {
   height: 100vh; text-align: center;
   display: flex; flex-direction: column; gap: 0.5rem; 
@@ -52,14 +53,22 @@ header {
     background-color: var(--yellow); padding: 1rem;
     background-image: url("/public/img/paper-soft.png"); background-blend-mode: soft-light;
     border: 1px solid var(--black); border-radius: 0.25rem;
-    label { display: block; text-align: left; margin-bottom: 0.5rem;}
+    label {
+      display: block; text-align: left; margin-bottom: 0.5rem;
+    }
+    input { height: 1.5rem; border: 2px solid var(--black); border-radius: 0.25rem;}
+    input[type="submit"] {
+      height: 1.5rem;
+      cursor: pointer; font-weight: bold; display: inline-block;
+      background-color: var(--light-blue); color: var(--blue-safe);
+    }
   }
   >nav {
     display: flex; flex-wrap: wrap;
     justify-content: center; align-items: center; gap: 0.5rem;
     a {
-      padding: 0.5rem 1rem;
-      border: 1px solid var(--pink); border-radius: 0.25rem;
+      padding: 0.5rem 1rem; font-weight: bold;
+      border: 2px solid var(--pink); border-radius: 0.25rem;
       background-color: var(--light-pink); color: var(--pink-safe);
       &:hover { background-color: var(--pink-safe); border-color: var(--pink-safe); color: var(--light-pink);}
     }
@@ -100,8 +109,23 @@ main {
       }
     }
   }
-  #tiers { background-color: var(--white);
+  #tiers {
+    background-color: var(--white); text-align:center;
     background-image: url("/public/img/paper.png"); background-blend-mode: overlay;
+    ul {
+      margin: 0; padding: 1rem 0 0; list-style: none;
+      display: flex; flex-direction: column; gap: 0.5rem;
+      li {
+        padding: 0.5rem; background-color: var(--light-blue);
+        border: 1px solid var(--blue); color: var(--blue-safe);
+        border-radius: 0.5rem; width: 86%;
+        &:nth-child(2) { margin-left: 3%; background-color: var(--light-pink); border-color: var(--pink); color: var(--pink-safe)}
+        &:nth-child(3) { margin-left: 6%; background-color: var(--light-green); border-color: var(--green); color: var(--green-safe)}
+        &:last-child { margin-left: 9%; background-color: var(--yellow); border-color: var(--pink); color: var(--pink-safe)}
+      }
+      figure { margin: 0; padding: 0; text-align: center;}
+      img { border-radius: 0.5rem; max-height: 12rem; max-width: 100%; height: 100%; width: auto; margin: auto;}
+    }
   }
   #faq {
     display: flex; flex-direction: column; gap: 1rem;
@@ -143,11 +167,16 @@ main {
       flex-direction: row; margin: auto;
       max-width: 50rem; margin: auto;
     }
+    #tiers {
+      ul { padding: 1rem 0; margin: auto; max-width: 40rem;}
+    }
     #faq { margin: 0 1rem 1rem;}
   }
 }
 /* Tablet */
 @media screen and (min-width: 40rem) {
+  h2 { font-size: 3rem;}
+  p, figcaption, a, label, button, input[type=submit] { font-size: 1.1rem;}
   header {
     h1>img { max-width: 25rem; margin: auto; }
     #bg-overlay {
@@ -161,6 +190,15 @@ main {
   main {
     #carousel { height: 14rem; img { height: 13rem; }}
     #premise>ul { max-width: 55rem; }
+    #tiers>ul {
+      max-width: 100%; width: 80%;
+      li {
+        width: 70%;
+        &:nth-child(2) { margin-left: 10%; background-color: var(--light-pink); border-color: var(--pink); color: var(--pink-safe)}
+        &:nth-child(3) { margin-left: 20%; background-color: var(--light-green); border-color: var(--green); color: var(--green-safe)}
+        &:last-child { margin-left: calc(30% - 1rem - 1px); background-color: var(--yellow); border-color: var(--pink); color: var(--pink-safe)}
+      }
+    }
     #faq {
       flex-direction: row; flex-wrap: wrap; margin: 0 1rem 1rem;
       aside { width: 40%; flex-grow: 1;}
@@ -182,6 +220,7 @@ main {
   main {
     #carousel { height: 15rem; img { height: 14rem; }}
     #premise>ul { max-width: 60rem; }
+    /* #tiers>ul { width: 60%; } */
     #faq {
       margin: 0 5% 2rem;
       aside { width: 30%; flex-grow: 1;}
