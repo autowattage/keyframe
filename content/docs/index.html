@@ -3,7 +3,7 @@
 
 {% block content %}
 <h1>Overview</h1>
-<p>Welcome to the Keyframe docs!
+<p>Welcome to the Keyframe docs!</p>
 <p>To navigate this website, use the left-side bar (or the top menu button for mobile users).</p>
 <h2 id="h2-rsrc">Resources</h2>
 <h3 id="h3-p5js">p5.js</h3>
@@ -14,8 +14,10 @@
   <li><a href="https://p5js.org/tutorials/">p5.js Web Editor</a>: An online web editor specialized for p5.js (you will need to record your time with <a href="/docs/time/#h2-ll">Lapse</a>)</li>
   <li><a href="https://openprocessing.org">OpenProcessing</a>: The p5.js and Processing community. Has lots of great examples and inspiration!</li>
 </ul>
-<h3 id="h3-p5js">Processing</h3>
-<p><a href="https://processing.org">Processing</a>
+<h3 id="h3-proc">Processing</h3>
+<p><a href="https://processing.org">Processing</a> is the Java equivalent of p5.js. It comes with its own IDE (code editor).</p>
+<h3 id="h3-3js">three.js</h3>
+<p>WIP - check back soon!</p>
 <!-- <hr id="footnote"> -->
 <!-- <aside> -->
   <!-- <p><a href="#" id="footnote-1" class="footnote">[1]</a>Here's a footnote</p> -->
@@ -30,7 +32,15 @@
 {% endblock %}
 
 {% block pagemenu %}
-<li><a href="#">Template file</a></li>
+<li><a href="#">Overview</a></li>
+<ul>
+  <li><a href="#h2-rsrc">Resources</a></li>
+  <ul>
+    <li><a href="#h3-p5js">p5.js</a></li>
+    <li><a href="#h3-proc">Processing</a></li>
+    <li><a href="#h3-3js">three.js</a></li>
+  </ul>
+</ul>
 {% endblock %}
 
 

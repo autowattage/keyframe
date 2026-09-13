@@ -63,10 +63,10 @@
     <h2>tiers</h2>
     <p>Get better prizes by working longer on your projects!</p>
     {% set tierlist = [
-      ["/public/img/index/postcard.png", "White and yellow postcard with 6 doodles of a flour sack", "2+ hours: sticker sheet!"],
-      ["", "", "8+ hours: Procreate Dreams or animation lightbox!"],
-      ["", "", "15+ hours: CSP Pro 5 license or screenless drawing tablet!"],
-      ["/public/img/index/keychain.png", "White flour sack hanging off a keychain", "animations that get 1k+ views on any platform get a custom acrylic keychain!"]
+      ["/public/img/index/postcard.png", "White and yellow postcard with 6 doodles of a flour sack", "2+ hours: <b>sticker sheet</b>!"],
+      ["", "", "8+ hours: <b>Procreate Dreams</b> or animation lightbox!"],
+      ["", "", "15+ hours: <b>Clip Studio Paint Pro license</b> or screenless drawing tablet!"],
+      ["/public/img/index/keychain.png", "White flour sack hanging off a keychain", "animations with 500+ views get a doodle with their sticker sheet!<br>get 1k+ views on any platform to win a <b>custom acrylic keychain</b>!"]
     ] %}
     <ul>
       {% for tier in tierlist %}
@@ -82,15 +82,15 @@
   <section id="faq">
     <h2>faq</h2>
     {% set faqlist = [
-      ["Can I participate?", "Any teenager ages 13-18 (under 19) can participate in Keyframe!"],
-      ["What if I can't code?", "You can read the guides in the <a href='./docs/'>docs!</a>"],
-      ["How many projects can I submit?", "As many as you'd like!"],
-      ["How long can I spend drawing?", "Art can make up 25% of a project's total working time.", "You can track as many hours as you'd like making art, but the time working will be deflated."],
+      ["Can I participate?", "Any teenager ages 13-18 (over 12, under 19) can participate in Keyframe!"],
+      ["What if I can't code?", "Beginners are more than welcome to join!", "Both Keyframe and its coding languages are beginner-friendly and have plenty of <a href='/docs/'>guides</a> to help you get started."],
+      ["How many projects can I submit?", "Make as many projects as you'd like!"],
+      ["How long can I spend drawing?", "Art can make up at most 25% of a project's total tracked time.", "You can track as many hours as you'd like making art, but the time working will be deflated."],
       ["Can I submit my project to another Hack Club program?", "Keyframe doesn't allow double dipping, sorry!"],
       ["Can I submit team projects?", "No, sorry! You can only submit your own work to Keyframe."],
-      ["Can I use AI?", "AI-generated code is not allowed, sorry!"],
-      ["When does Keyframe end?", "Keyframe runs from September 10, 2026 to September 15, 2026- though it may be extended!"],
-      ["I have more questions!", "Ask a question in <a href='https://hackclub.enterprise.slack.com/archives/C0BUDKQGMHR'>#keyframe</a> or <a href='https://hackclub.enterprise.slack.com/archives/C0EA9S0A0'>#code</a>!"]
+      ["Can I use AI?", "No amount of AI-generated/AI-modified code is allowed, sorry! Projects with suspected AI usage will be immediately rejected."],
+      ["When does Keyframe end?", "Keyframe runs from September 12, 2026 to September 16, 2026- though it may be extended!"],
+      ["I have more questions!", "Ask a question in <a href='https://hackclub.enterprise.slack.com/archives/C0BUDKQGMHR'>#keyframe</a> or <a href='https://hackclub.enterprise.slack.com/archives/C0EA9S0A0'>#code</a>! Alternatively, email <a href='mailto:nick@hackclub.com'>nick@hackclub.com</a>."]
     ] %}
     {% for question in faqlist %}
     <aside>

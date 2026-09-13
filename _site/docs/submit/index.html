@@ -72,7 +72,7 @@
   <li>Facebook (believe it or not, lots of people use Facebook!)</li>
   <li>Twitter</li>
 </ul>
-<p>Make sure to include a link <a href="/">Keyframe</a> or <a href="https://hackclub.com">Hack Club</a> in the description!</p>
+<p>Make sure to link <a href="/">Keyframe</a> or <a href="https://hackclub.com">Hack Club</a> in the description!</p>
 <p>Now we need to include a 'demo url' of our project. This can be either a downloadable executable file or a website link- p5.js and three.js projects should publish a website, and Processing projects should have a downloadable.</p>
 <h3 id="h3-ghpages">Publishing a website with Github Pages</h3>
 <p>To make a Github Page, you need to first <a href="#h2-repo">create a Github repository</a>. Then navigate to Settings 🡺 Pages.</p>
@@ -98,7 +98,7 @@
 
 
 <h2 id="h2-submit">Submitting</h2>
-<fieldset>
+<fieldset id="checklist">
   <legend>My project...</legend>
   <ul>
     <li><label><input type="checkbox">has coding time tracked with <a href="/docs/time#h2-hackatime">Hackatime</a> or <a href="/docs/time#h2-ll">Lapse/Lookout</a></label></li>
@@ -128,11 +128,22 @@
   <a href="https://forms.hackclub.com/keyframe">submit your project here!</a>
 </div>
 
+<style>
+  #submission-ready {
+    text-align: center; margin-top: 0.5rem;
+    a {
+      display: inline-block; border-radius: 0.5rem; padding: 0.5rem 1rem; margin-top: 0.5rem;
+      border: 1px solid var(--blue); background-color: var(--light-blue); color: var(--blue-safe);
+    }
+  }
+  #checklist:has(input:not(:checked)) ~ #submission-ready { display: none;}
+</style>
+
 
 
       <footer>
       
-<a href="/docs/aseprite/"><span>Previous</span>🡸 Aseprite</a>
+<a href="/docs/p5js/"><span>Previous</span>🡸 Basics of p5.js</a>
 <div></div>
 
       </footer>

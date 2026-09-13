@@ -119,8 +119,8 @@ main {
         padding: 0.5rem; background-color: var(--light-blue);
         border: 1px solid var(--blue); color: var(--blue-safe);
         border-radius: 0.5rem; width: 86%;
-        &:nth-child(2) { margin-left: 3%; background-color: var(--light-pink); border-color: var(--pink); color: var(--pink-safe)}
-        &:nth-child(3) { margin-left: 6%; background-color: var(--light-green); border-color: var(--green); color: var(--green-safe)}
+        &:nth-child(2) { img { display: none } margin-left: 3%; background-color: var(--light-pink); border-color: var(--pink); color: var(--pink-safe)}
+        &:nth-child(3) { img { display: none } margin-left: 6%; background-color: var(--light-green); border-color: var(--green); color: var(--green-safe)}
         &:last-child { margin-left: 9%; background-color: var(--yellow); border-color: var(--pink); color: var(--pink-safe)}
       }
       figure { margin: 0; padding: 0; text-align: center;}
