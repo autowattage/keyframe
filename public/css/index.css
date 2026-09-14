@@ -45,9 +45,8 @@ header {
       position: absolute;
     }
     img { position: absolute; top: 0;}
-    img:first-of-type {
-      height: 100%; width: auto; right: -5rem;
-    }
+    img:first-of-type { height: 100%; width: auto; right: -5rem; }
+    img:last-of-type { height: 2.5rem; width: auto; left: 0.5rem; top: 0.5rem;}
   }
   #signup {
     background-color: var(--yellow); padding: 1rem;
