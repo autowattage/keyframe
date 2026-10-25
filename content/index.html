@@ -27,20 +27,23 @@
 
 <main>
   <div id="carousel">
-    <a href=""><img src="/public/img/index/buttonfall.gif" alt="Colorful buttons moving upward on a blue background"></a>
-    <a href=""><img src="/public/img/index/constraints.gif" alt="Fractal circles rotating counterclockwise"></a>
-    <a href=""><img src="/public/img/index/pixels.gif" alt="Shimmering yellow and white pixels in a circle"></a>
-    <a href=""><img src="/public/img/index/planet.gif" alt="Blue and green planet being generated on a black background"></a>
-    <a href=""><img src="/public/img/index/rollercoaster.gif" alt="Blocks on a rollercoaster"></a>
-    <a href=""><img src="/public/img/index/shimmer.gif" alt="Shimmering orange, blue, white, and black stripes with a ripple effect"></a>
-
-    <!-- me when im too lazy to figure out proper carousel semantics -->
-    <a href=""><img src="/public/img/index/buttonfall.gif" alt="Colorful buttons moving upward on a blue background"></a>
-    <a href=""><img src="/public/img/index/constraints.gif" alt="Fractal circles rotating counterclockwise"></a>
-    <a href=""><img src="/public/img/index/pixels.gif" alt="Shimmering yellow and white pixels in a circle"></a>
-    <a href=""><img src="/public/img/index/planet.gif" alt="Blue and green planet being generated on a black background"></a>
-    <a href=""><img src="/public/img/index/rollercoaster.gif" alt="Blocks on a rollercoaster"></a>
-    <a href=""><img src="/public/img/index/shimmer.gif" alt="Shimmering orange, blue, white, and black stripes with a ripple effect"></a>
+    {% set carousellist = [
+      ["https://openprocessing.org/@u166218/1240365","/public/img/index/designdesign.gif","White text with reading 'Design Design' merging into moving lines"],
+      ["https://github.com/reyrove/Triangulum-Generative-Art","/public/img/index/triangulum.gif","Multi-colored patterns of spirals and triangles"],
+      ["https://fepegar.github.io/creative-coding/squares-javi/","/public/img/index/wheel.gif","A black and beige square in a circle containing a circle repeated"],
+      ["https://github.com/benmaier/spaghetti-ai-funghi/tree/main","/public/img/index/sphageti.gif","Multiple white lines cominf from the corns of the screen and moving in random directions"],
+      ["https://vislupus.github.io/p5-simulations/solar_system.html","/public/img/index/solarsys.gif","A yellow ball being orbited by mutliple other colored spheres"],
+      ["https://github.com/leonlaser/p5js-particle-flowfield","/public/img/index/flowfield.gif","A purple, pink, and green flowing field"],
+      ["https://github.com/Braydenh563/HELIXLABS","/public/img/index/helixlabs.gif","A gif of an organism cell plus its properties"],
+      ["https://github.com/pizzalover125/gravity-clock", "/public/img/index/gravityclock.gif", "Multicolored spheres being pulled in different directions with a clock on top"]
+      ["https://github.com/deltea/procedural-animation", "/public/img/index/snek.gif", "White outline of a snake circling around and interacting with color-changing spheres"]
+      ["https://editor.p5js.org/EuanRipper/full/jcCEwdaPH", "/public/img/index/conway.gif", "White grid board with colored"]
+    ] %}
+    {% for i in range(0,2) %}
+      {% for step in carousellist %}
+    <a href="{{ step[0] }}"><img src="{{ step[1] }}" alt="{{ step[2] }}"></a>
+      {% endfor %}
+    {% endfor %}
   </div>
   <script src="/public/js/index.js"></script>
   <section id="premise">
