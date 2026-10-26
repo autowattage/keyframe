@@ -3,24 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Make a collaborative animation and post it online!">
     <title>{{ title }}</title>
     <link rel="icon" type="image/x-icon" href="/public/img/favicon.ico">
     <link rel="stylesheet" href="/public/css/global.css">
     {% for file in stylelist %}
     <link rel="stylesheet" href="/public/css/{{ file }}">
     {% endfor %}
-    {% block head %}{% endblock %}
   </head>
 
   <body>
-    <div>
-      {% block content %}{% endblock %}
-    </div>
-    {% if footer|length %}
-      {{ footer }}
-    {% else %}
-      {% include "./partials/footer.html" %}
-    {% endif %}
+    {% block content %}{% endblock %}
   </body>
 </html>
